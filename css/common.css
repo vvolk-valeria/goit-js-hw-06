@@ -22,3 +22,25 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+li {
+width: calc((100% - 2*30px) / 3);
+min-width: 300px;
+}
