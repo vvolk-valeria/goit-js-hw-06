@@ -48,19 +48,19 @@ const nullSize = 0;
 
 bgCreateEl.addEventListener('click', createBoxes);
 btnDestroyEl.addEventListener('click', destroyBoxes);
-bgCreateEl.addEventListener('click', qwe);
+bgCreateEl.addEventListener('click', onFindAmount);
 
 
-function qwe() {
+function onFindAmount() {
 let amount = numberBoxEl.value;
 // console.log('amount', amount); 
   return amount;
 };  
 
 function createBoxes(amount) {
-  if (qwe() >= 1) {
+  if (onFindAmount() >= 1) {
    
-    let amount = qwe();
+    let amount = onFindAmount();
 
       for (let i = 1; i <= amount; i += 1) {
         
