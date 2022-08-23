@@ -1,4 +1,4 @@
-//? Задание 4
+//* Задание 4
 
 // Счетчик состоит из спана и кнопок, которые, при клике, должны
 // увеличивать и уменьшать его значение на единицу.
@@ -15,3 +15,28 @@
 // уменьшай значение счтетчика.
 // Обновляй интерфейс новым значением переменной counterValue.
 
+
+const counterValueEl = document.querySelector('#value');
+const buttonPlusEl = document.querySelector('button[data-action="increment"]');
+const buttonMinusEl = document.querySelector('button[data-action="decrement"]');
+let counterValue = 0;
+
+
+// buttonPlusEl.addEventListener('click', () => { counterValue += 1;
+//     counterValueEl.textContent = counterValue; });
+// buttonMinusEl.addEventListener('click', () => {counterValue -= 1;
+//     counterValueEl.textContent = counterValue;});
+
+buttonPlusEl.addEventListener('click', onPlusButtonClick);
+buttonMinusEl.addEventListener('click', onMinusButtonClick);
+
+
+function onPlusButtonClick() {
+    counterValue += 1;
+    counterValueEl.textContent = counterValue;
+};
+
+function onMinusButtonClick() {
+    counterValue -= 1;
+    counterValueEl.textContent = counterValue;
+};

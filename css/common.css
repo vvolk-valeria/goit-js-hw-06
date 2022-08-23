@@ -29,7 +29,7 @@ img {
   width: 100%;
 }
 
-ul {
+.gallery {
   display: flex;
   list-style: none;
   padding: 0;
@@ -40,7 +40,22 @@ ul {
   gap: 30px;
 }
 
-li {
+.gallery__item {
 width: calc((100% - 2*30px) / 3);
 min-width: 300px;
+}
+
+#boxes {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#boxes > div {
+  border: 1px solid black;
 }
