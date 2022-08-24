@@ -48,7 +48,6 @@ const nullSize = 0;
 
 bgCreateEl.addEventListener('click', createBoxes);
 btnDestroyEl.addEventListener('click', destroyBoxes);
-bgCreateEl.addEventListener('click', onFindAmount);
 
 
 function onFindAmount() {
