@@ -55,8 +55,12 @@ const btnSubmitEl = document.querySelector('button[type="submit"]');
      
      console.log(formData);   
     
-     formEl.reset();
+   //  event.currentTarget.reset();   
+    formEl.reset();
+
      
+
+
 //      const formaData = new FormData(formEl);
 //      console.log(formaData);
      
@@ -66,6 +70,10 @@ const btnSubmitEl = document.querySelector('button[type="submit"]');
 //   });
      
 };
+
+
+//? На очищение формы работает и   formEl.reset();  и  event.currentTarget.reset();  
+//? как правельнее и почему? 
 
 
 
