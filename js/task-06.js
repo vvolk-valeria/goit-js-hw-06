@@ -29,7 +29,8 @@
 // }
 
 const inputEl = document.querySelector('#validation-input');
-const validNumberLength = inputEl.dataset.length;
+// const validNumberLength = inputEl.dataset.length;
+const validNumberLength = Number(inputEl.dataset.length);
 // console.log(inputEl);
 // console.log(validNumberLength);
 
@@ -44,18 +45,37 @@ function onRemoveClass(event) {
     if (event.currentTarget.value.length === 0) {
         inputEl.classList.remove("invalid", "valid");
         // console.log('remove');
-   }
+    }
+//     if (event.currentTarget.value.length === validNumberLength) {
+//         inputEl.classList.remove("invalid");
+//    } else inputEl.classList.remove("valid");
 };
 
 
 function onInputInValid(event) {
-    if (event.currentTarget.value.length < validNumberLength || event.currentTarget.value.length > validNumberLength) {
-        inputEl.classList.add("invalid");
-        // console.log('invalid');
 
-    } else  inputEl.classList.add("valid");
+    if (event.currentTarget.value.length !== validNumberLength) {
+        console.log('invalid', validNumberLength);
+        inputEl.classList.remove("valid");
+      inputEl.classList.add("invalid");
+// console.log('invalid');
+
+    } else {
+        inputEl.classList.remove("invalid");
+        inputEl.classList.add("valid");
+    }
+        
+
 };
 
+
+// function onInputInValid(event) {
+//     if (event.currentTarget.value.length < validNumberLength || event.currentTarget.value.length > validNumberLength) {
+//         inputEl.classList.add("invalid");
+//         // console.log('invalid');
+
+//     } else  inputEl.classList.add("valid");
+// };
 
 // function onInputValid(event) {
 //     if (event.currentTarget.value.length === validNumberLength) {
@@ -65,8 +85,4 @@ function onInputInValid(event) {
 //     //    inputEl.style.borderColor = "#4caf50";
 //     }
 // };
-
-//? Обьясните, пожалуйста, почему в коде когда 
-//? идет "event.currentTarget.value.length === validNumberLength" у меня не действует
-//? условие, а когда ставишь "event.currentTarget.value.length === 6", оно работает ?
-    
+   
